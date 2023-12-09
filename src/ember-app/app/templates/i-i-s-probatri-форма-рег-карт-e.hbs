@@ -1,0 +1,110 @@
+<h3 class="ui header">{{t "forms.i-i-s-probatri-форма-рег-карт-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probatri-форма-рег-карт-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-probatri-форма-рег-карт-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probatri-форма-рег-карт-e.карты-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.карты
+      displayAttributeName="кодКарты"
+      autocomplete=true
+      relationName="карты"
+      projection="КартыL"
+      title=(t "forms.i-i-s-probatri-форма-рег-карт-e.карты-caption")
+      readonly=readonly
+      componentName="картыLookup"
+      class=(if (v-get validationModel "карты" "isInvalid") "error")
+      data-test-i-i-s-probatri-форма-рег-карт-e-карты=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "карты" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probatri-форма-рег-карт-e.комната-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.комната
+      displayAttributeName="номер"
+      autocomplete=true
+      relationName="комната"
+      projection="КомнатаL"
+      title=(t "forms.i-i-s-probatri-форма-рег-карт-e.комната-caption")
+      readonly=readonly
+      componentName="комнатаLookup"
+      class=(if (v-get validationModel "комната" "isInvalid") "error")
+      data-test-i-i-s-probatri-форма-рег-карт-e-комната=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "комната" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probatri-форма-рег-карт-e.гость-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.гость
+      displayAttributeName="фамилия"
+      autocomplete=true
+      relationName="гость"
+      projection="ГостьL"
+      title=(t "forms.i-i-s-probatri-форма-рег-карт-e.гость-caption")
+      readonly=readonly
+      componentName="гостьLookup"
+      class=(if (v-get validationModel "гость" "isInvalid") "error")
+      data-test-i-i-s-probatri-форма-рег-карт-e-гость=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "гость" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probatri-форма-рег-карт-e.сотрудник-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.сотрудник
+      displayAttributeName="фамилия"
+      autocomplete=true
+      relationName="сотрудник"
+      projection="СотрудникL"
+      title=(t "forms.i-i-s-probatri-форма-рег-карт-e.сотрудник-caption")
+      readonly=readonly
+      componentName="сотрудникLookup"
+      class=(if (v-get validationModel "сотрудник" "isInvalid") "error")
+      data-test-i-i-s-probatri-форма-рег-карт-e-сотрудник=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "сотрудник" "message")}}
+  </div>
+</form>

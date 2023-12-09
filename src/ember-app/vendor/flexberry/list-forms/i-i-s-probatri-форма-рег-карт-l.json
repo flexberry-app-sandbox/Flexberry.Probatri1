@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probatri-форма-рег-карт-e",
+  "editForm": "i-i-s-probatri-форма-рег-карт-e",
+  "external": false,
+  "caption": "Форма рег карт",
+  "name": "IISProbatriФормаРегКартL",
+  "className": "ФормаРегКартL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probatri-форма-рег-карт",
+      "modelProjection": "ФормаРегКартL"
+    }
+  ]
+}

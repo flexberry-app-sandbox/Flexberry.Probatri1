@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISProbatriКарты",
+  "modelName": "i-i-s-probatri-карты",
+  "className": "Карты",
+  "nameSpace": "IIS.Probatri",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "кодКарты",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "типКарты",
+      "type": "i-i-s-probatri-вид-карты",
+      "flexberryType": "ВидКарты",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "КартыE",
+      "modelName": "i-i-s-probatri-карты",
+      "attrs": [
+        {
+          "name": "кодКарты",
+          "caption": "Код карты",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "типКарты",
+          "caption": "Тип карты",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "КартыL",
+      "modelName": "i-i-s-probatri-карты",
+      "attrs": [
+        {
+          "name": "кодКарты",
+          "caption": "Код карты",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "типКарты",
+          "caption": "Тип карты",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,137 @@
+﻿{
+  "name": "IISProbatriФормаРегВхода",
+  "modelName": "i-i-s-probatri-форма-рег-входа",
+  "className": "ФормаРегВхода",
+  "nameSpace": "IIS.Probatri",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "комната",
+      "relatedTo": "i-i-s-probatri-комната",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "тЧРегВхСот",
+      "relatedTo": "i-i-s-probatri-т-ч-рег-вх-сот",
+      "inverse": "формаРегВхода"
+    },
+    {
+      "name": "тЧРегВхСотр",
+      "relatedTo": "i-i-s-probatri-т-ч-рег-вх-сотр",
+      "inverse": "формаРегВхода"
+    },
+    {
+      "name": "тЧРегВхГост",
+      "relatedTo": "i-i-s-probatri-т-ч-рег-вх-гост",
+      "inverse": "формаРегВхода"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ФормаРегВходаE",
+      "modelName": "i-i-s-probatri-форма-рег-входа",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Номер",
+          "lookupValueField": "номер",
+          "relationName": "Комната",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номер",
+              "caption": "Номер",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Комната",
+          "name": "комната",
+          "relatedTo": "i-i-s-probatri-комната",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ТЧРегВхСотрE",
+          "caption": "Т ч рег вх сотр",
+          "name": "тЧРегВхСотр",
+          "relatedTo": "i-i-s-probatri-т-ч-рег-вх-сотр",
+          "inverse": null
+        },
+        {
+          "projectionName": "ТЧРегВхГостE",
+          "caption": "Т ч рег вх гост",
+          "name": "тЧРегВхГост",
+          "relatedTo": "i-i-s-probatri-т-ч-рег-вх-гост",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ФормаРегВходаL",
+      "modelName": "i-i-s-probatri-форма-рег-входа",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Комната",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номер",
+              "caption": "Номер",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер",
+          "name": "комната",
+          "relatedTo": "i-i-s-probatri-комната",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

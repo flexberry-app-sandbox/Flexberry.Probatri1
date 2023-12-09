@@ -1,0 +1,98 @@
+<h3 class="ui header">{{t "forms.i-i-s-probatri-гость-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.фамилия
+      class=(if (v-get validationModel "фамилия" "isInvalid") "error")
+      label=(t "forms.i-i-s-probatri-гость-e.фамилия-caption")
+      data-test-i-i-s-probatri-гость-e-фамилия=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "фамилия" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.имя
+      class=(if (v-get validationModel "имя" "isInvalid") "error")
+      label=(t "forms.i-i-s-probatri-гость-e.имя-caption")
+      data-test-i-i-s-probatri-гость-e-имя=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "имя" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.отчество
+      class=(if (v-get validationModel "отчество" "isInvalid") "error")
+      label=(t "forms.i-i-s-probatri-гость-e.отчество-caption")
+      data-test-i-i-s-probatri-гость-e-отчество=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "отчество" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probatri-гость-e.датаРождения-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаРождения
+      class=(if (v-get validationModel "датаРождения" "isInvalid") "error")
+      data-test-i-i-s-probatri-гость-e-датаРождения=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаРождения" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.серНомПаспорта
+      class=(if (v-get validationModel "серНомПаспорта" "isInvalid") "error")
+      label=(t "forms.i-i-s-probatri-гость-e.серНомПаспорта-caption")
+      data-test-i-i-s-probatri-гость-e-серНомПаспорта=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "серНомПаспорта" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.телефон
+      class=(if (v-get validationModel "телефон" "isInvalid") "error")
+      label=(t "forms.i-i-s-probatri-гость-e.телефон-caption")
+      data-test-i-i-s-probatri-гость-e-телефон=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "телефон" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.почта
+      class=(if (v-get validationModel "почта" "isInvalid") "error")
+      label=(t "forms.i-i-s-probatri-гость-e.почта-caption")
+      data-test-i-i-s-probatri-гость-e-почта=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "почта" "message")}}
+  </div>
+</form>

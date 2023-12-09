@@ -1,0 +1,47 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Карты",
+      "projection": "КартыL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Комната",
+      "projection": "КомнатаL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Гость",
+      "projection": "ГостьL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Сотрудник",
+      "projection": "СотрудникL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Форма рег карт",
+  "name": "IISProbatriФормаРегКартE",
+  "className": "ФормаРегКартE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probatri-форма-рег-карт",
+      "modelProjection": "ФормаРегКартE"
+    }
+  ]
+}

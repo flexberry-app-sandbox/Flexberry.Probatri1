@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Probatri",
+  "className": "ВидКарты",
+  "enumObjects": {
+    "Универсальная": "",
+    "Гостевая": ""
+  }
+}

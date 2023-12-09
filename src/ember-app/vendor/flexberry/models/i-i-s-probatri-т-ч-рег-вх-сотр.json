@@ -1,0 +1,60 @@
+﻿{
+  "name": "IISProbatriТЧРегВхСотр",
+  "modelName": "i-i-s-probatri-т-ч-рег-вх-сотр",
+  "className": "ТЧРегВхСотр",
+  "nameSpace": "IIS.Probatri",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудник",
+      "relatedTo": "i-i-s-probatri-сотрудник",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "формаРегВхода",
+      "relatedTo": "i-i-s-probatri-форма-рег-входа",
+      "inverse": "тЧРегВхСотр"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТЧРегВхСотрE",
+      "modelName": "i-i-s-probatri-т-ч-рег-вх-сотр",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "Фамилия",
+          "lookupValueField": "фамилия",
+          "relationName": "Сотрудник",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": true,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Сотрудник",
+          "name": "сотрудник",
+          "relatedTo": "i-i-s-probatri-сотрудник",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

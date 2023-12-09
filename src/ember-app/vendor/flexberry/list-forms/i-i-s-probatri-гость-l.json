@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probatri-гость-e",
+  "editForm": "i-i-s-probatri-гость-e",
+  "external": false,
+  "caption": "Гость",
+  "name": "IISProbatriГостьL",
+  "className": "ГостьL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probatri-гость",
+      "modelProjection": "ГостьL"
+    }
+  ]
+}

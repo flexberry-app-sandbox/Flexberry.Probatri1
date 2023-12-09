@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probatri-форма-рег-входа-e",
+  "editForm": "i-i-s-probatri-форма-рег-входа-e",
+  "external": false,
+  "caption": "Форма рег входа",
+  "name": "IISProbatriФормаРегВходаL",
+  "className": "ФормаРегВходаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probatri-форма-рег-входа",
+      "modelProjection": "ФормаРегВходаL"
+    }
+  ]
+}

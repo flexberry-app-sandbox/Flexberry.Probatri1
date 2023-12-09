@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probatri-должности-e",
+  "editForm": "i-i-s-probatri-должности-e",
+  "external": false,
+  "caption": "Должности",
+  "name": "IISProbatriДолжностиL",
+  "className": "ДолжностиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probatri-должности",
+      "modelProjection": "ДолжностиL"
+    }
+  ]
+}

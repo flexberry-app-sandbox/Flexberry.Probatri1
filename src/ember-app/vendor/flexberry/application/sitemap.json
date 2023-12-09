@@ -1,0 +1,64 @@
+﻿{
+  "applicationCaption": "Probatri",
+  "applicationTitle": "Probatri",
+  "items": [
+    {
+      "link": null,
+      "menuName": "probatri",
+      "caption": "Probatri",
+      "title": "Probatri",
+      "children": [
+        {
+          "link": "i-i-s-probatri-форма-рег-входа-l",
+          "menuName": null,
+          "caption": "Форма рег входа",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-probatri-карты-l",
+          "menuName": null,
+          "caption": "Карты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-probatri-комната-l",
+          "menuName": null,
+          "caption": "Комната",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-probatri-должности-l",
+          "menuName": null,
+          "caption": "Должности",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-probatri-сотрудник-l",
+          "menuName": null,
+          "caption": "Сотрудник",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-probatri-форма-рег-карт-l",
+          "menuName": null,
+          "caption": "Форма рег карт",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-probatri-гость-l",
+          "menuName": null,
+          "caption": "Гость",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
